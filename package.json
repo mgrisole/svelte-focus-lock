@@ -1,6 +1,6 @@
 {
   "name": "svelte-focus-lock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Svelte component forcing the focus to be locked into the parent component",
   "main": "src/main.cjs.js",
   "module": "src/main.es.js",
