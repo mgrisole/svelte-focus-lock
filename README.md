@@ -42,7 +42,7 @@ Usage
 
 ```html
 <script>
-  import { focusLock } from 'svelte-focus-lock'
+  import { focusLock } from 'svelte-focus-lock/src/FocusLock.svelte'
 </script>
 
 {#if showing}
