@@ -1,20 +1,22 @@
 {
-  "name": "svelte-focus-trap",
+  "name": "svelte-focus-lock",
   "version": "1.0.0",
-  "private": true,
+  "description": "Svelte component forcing the focus to be locked into the parent component",
   "main": "src/main.cjs.js",
   "module": "src/main.es.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "release": "release-it"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@tsconfig/svelte": "^1.0.0",
+    "release-it": "^14.5.1",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",

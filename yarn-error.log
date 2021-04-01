@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/MAXIME/.nvm/versions/node/v14.16.0/bin/node /usr/local/bin/yarn add Mousetrap
+  /Users/MAXIME/.nvm/versions/node/v14.16.0/bin/node /usr/local/bin/yarn add release-it -D
 
 PATH: 
-  /usr/local/Cellar/zplug/2.4.2/bin:/Users/MAXIME/.nvm/versions/node/v14.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/MAXIME/.cargo/bin:/Users/MAXIME/lab/svelte-focus-trap/node_modules/.bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
+  /usr/local/Cellar/zplug/2.4.2/bin:/Users/MAXIME/.nvm/versions/node/v14.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/MAXIME/.cargo/bin:/Users/MAXIME/lab/svelte-focus-lock/node_modules/.bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
 
 Yarn version: 
   1.22.10
@@ -14,32 +14,31 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/Mousetrap: Not found
-      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
-      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (internal/streams/readable.js:1327:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  SyntaxError: /Users/MAXIME/lab/svelte-focus-lock/package.json: Unexpected string in JSON at position 279
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
-    "name": "svelte-app",
+    "name": "svelte-focus-trap",
     "version": "1.0.0",
-    "private": true,
+    "description": "Svelte component forcing the focus to be locked into the parent component",
+    "main": "src/main.cjs.js",
+    "module": "src/main.es.js",
     "scripts": {
       "build": "rollup -c",
-      "dev": "rollup -c -w",
+      "dev": "rollup -c -w"
       "start": "sirv public --no-clear",
       "validate": "svelte-check"
     },
     "devDependencies": {
       "@rollup/plugin-commonjs": "^17.0.0",
       "@rollup/plugin-node-resolve": "^11.0.0",
+      "@rollup/plugin-typescript": "^8.0.0",
+      "@tsconfig/svelte": "^1.0.0",
       "rollup": "^2.3.4",
       "rollup-plugin-css-only": "^3.1.0",
       "rollup-plugin-livereload": "^2.0.0",
@@ -48,12 +47,11 @@ npm manifest:
       "svelte": "^3.0.0",
       "svelte-check": "^1.0.0",
       "svelte-preprocess": "^4.0.0",
-      "@rollup/plugin-typescript": "^8.0.0",
-      "typescript": "^4.0.0",
       "tslib": "^2.0.0",
-      "@tsconfig/svelte": "^1.0.0"
+      "typescript": "^4.0.0"
     },
     "dependencies": {
+      "mousetrap": "^1.6.5",
       "sirv-cli": "^1.0.0"
     }
   }
@@ -548,6 +546,11 @@ Lockfile:
     version "1.2.5"
     resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
     integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  
+  mousetrap@^1.6.5:
+    version "1.6.5"
+    resolved "https://registry.yarnpkg.com/mousetrap/-/mousetrap-1.6.5.tgz#8a766d8c272b08393d5f56074e0b5ec183485bf9"
+    integrity sha512-QNo4kEepaIBwiT8CDhP98umTetp+JNfQYBWvC1pc6/OAibuXtRcxZ58Qz8skvEHYvURne/7R8T5VoOI7rDsEUA==
   
   mri@^1.1.0:
     version "1.1.6"
